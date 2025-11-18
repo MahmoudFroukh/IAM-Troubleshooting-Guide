@@ -106,3 +106,20 @@ This guide provides standardized troubleshooting steps for resolving common Iden
 #### When to Escalate:
 - SSO connector misconfiguration
 - Incorrect SAML/OIDC attributes
+
+#### E. Missing or Incorrect Access Permissions 
+#### Symptoms:
+- User cannot view resources
+- Access denied errors
+- Missing role assignments
+
+#### Troubleshooting Steps:
+- Determine what access the user is requesting
+- Check if the user has the correct role (RBAC)
+- Compare their role to similar users
+- Submit or approve access request following company policy
+- Document entitlement changes in the ticket 
+
+#### When to Escalate:
+- Application-specific permissions requiring admin review 
+- Segregation of Duties (SoD) conflicts
