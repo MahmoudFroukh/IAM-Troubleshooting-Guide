@@ -38,13 +38,13 @@ This guide provides standardized troubleshooting steps for resolving common Iden
 
 ### 3. Common IAM Issues and Troubleshooting Steps
 
-A. Password  reset Issues
-Symptoms:
+#### A. Password  reset Issues
+#### Symptoms:
 - User cannot log in
 - System states `incorrect password`
 - User forgot password
 
-Troubleshooting Steps:
+#### Troubleshooting Steps:
 - Verify user identity following the company process
 - Check account status in the identity directory (AD/IDM system)
 - If locked -> unlock account
@@ -52,6 +52,39 @@ Troubleshooting Steps:
 - Verify password meets securty policy
 - Confirm user can log in again
 
-When to Escalate:
+#### When to Escalate:
 - Password resets succeed but authentication still fails
 - Account is not visible in the identity directory
+
+#### B. Account Lockout
+#### Symptoms:
+- `Account is locked` message
+- Too many failed login attempts
+
+#### Troubleshooting Steps:
+- Verify the lockout in IAM system (Active Directory, Okta, etc)
+- Unlock account
+- Check if the user is logged in elsewhere causing repeated failures
+- Confirm user is entering correct credentials
+- Ask the user to try logging in again
+
+#### When to Escalate:
+- Recurrent lockouts (indicate sync or device issues)
+
+#### C. MFA (Multi-Factor Authentication) Failure
+#### Symptoms:
+- Can't receive authentication code
+- Authentication app not working
+- Wrong verification method
+
+#### Troubleshooting Steps:
+- Verify user's MFA enrollment
+- Ask what type of MFA they use (SMS, email, authenticator app)
+- Check device time sync (common authenticator issue)
+- Reset MFA tokens if necessary
+- Re-enroll user in MFA
+- Test authentication
+
+#### When to Escalate:
+- MFA service outage
+- Token mismatch in IAM system logs
