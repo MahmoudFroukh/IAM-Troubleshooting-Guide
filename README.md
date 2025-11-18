@@ -88,3 +88,21 @@ This guide provides standardized troubleshooting steps for resolving common Iden
 #### When to Escalate:
 - MFA service outage
 - Token mismatch in IAM system logs
+
+#### D. SSO (Single Sign-On) Login Errors
+#### Symptoms:
+- User redirected to login page repeatedly
+- `Unauthorized` or `Invalid SSO token`
+- Login works on one system but not others
+
+#### Troubleshooting Steps:
+- Confirm the user has active account 
+- Check if the application is integrated with SSO 
+- Verify roles/permissions for application access 
+- Clear browser cache/cookies
+- Test sign-in from incognito mode
+- Check IAM loggs for authentication failures
+
+#### When to Escalate:
+- SSO connector misconfiguration
+- Incorrect SAML/OIDC attributes
